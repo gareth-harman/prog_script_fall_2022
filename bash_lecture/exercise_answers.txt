@@ -1,0 +1,14 @@
+
+# ANSWER chmod
+pwd
+cd ~/Desktop
+mkdir bash_exercises
+touch pizza.sh
+ls -lrt pizza.sh
+chmod 750 pizza.sh
+
+# ANSWER Overthewhire
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+pwd
+ls -lrt
+cat readme
