@@ -1,0 +1,15 @@
+
+# SOLUTION EXERCISE 1
+
+import lxml.etree as et
+import re
+
+uniprot_tree = et.parse('data/uniprot.xml')
+uniprot_root = uniprot_tree.getroot()
+namespace = re.match(r"{.*}", uniprot_root.tag).group()
+
+print(namespace)
+
+nsmap = {'up': 'http://uniprot.org/uniprot'}
+citations = uniprot_root.xpath(".//up:fullName", namespaces=nsmap)
+print(citations[0].text)
